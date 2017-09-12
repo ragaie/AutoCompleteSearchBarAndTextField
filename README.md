@@ -12,5 +12,5 @@ or add searchbar it will be like UIsearchbar view
 5- set delegete for component to know which element had been selected.
 6- add datasource for component
 7- add final you find this result.
- ![alt tag](https://github.com/ragaie/Search-With-Show-Filtered-Data/blob/master/SearchBar%26SearchText/Simulator%20Screen%20Shot%20Aug%2017%2C%202017%2C%205.03.59%20PM.png)
- ![alt tag](https://github.com/ragaie/Search-With-Show-Filtered-Data/blob/master/SearchBar%26SearchText/Simulator%20Screen%20Shot%20Aug%2017%2C%202017%2C%205.04.17%20PM.png)
+ ![alt tag](https://github.com/ragaie/Search-With-Show-Filtered-Data/blob/master/SearchBar%26SearchText/Simulator%20Screen%20Shot%20Sep%2012%2C%202017%2C%206.07.48%20PM.png)
+ ![alt tag](https://github.com/ragaie/Search-With-Show-Filtered-Data/blob/master/SearchBar%26SearchText/Simulator%20Screen%20Shot%20Sep%2012%2C%202017%2C%206.07.54%20PM.png)
