@@ -8,15 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController,SearchBarDelegate,SearchTextDelegate {
+class ViewController: UITableViewController,SearchBarDelegate,SearchTextDelegate {
 
     
-    @IBOutlet weak var customSearchBar: SearchBar!
+    @IBOutlet weak var customSearchBar: AutoCompleteSearchBar!
     
     
     
     
-    @IBOutlet weak var searchtextCustom: SearchText!
+    @IBOutlet weak var searchtextCustom: AutoCompleteTextField!
     
     
     var items = ["dfdf","ddgdgdg","dfgdg","dfgdfg","dfgdfg","dfgdgerert","dfdf","ddgdgdg","dfgdg","dfgdfg","dfgdfg","dfgdgerert"]
@@ -29,9 +29,9 @@ class ViewController: UIViewController,SearchBarDelegate,SearchTextDelegate {
         
         
         
-        searchtextCustom.delegate = self
+        searchtextCustom.delegateAutoCompletText = self
         searchtextCustom.dataSourceItem = items
-        customSearchBar.delegate = self
+        customSearchBar.delegateAutoComplete = self
         customSearchBar.dataSourceItem = items
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -43,7 +43,7 @@ class ViewController: UIViewController,SearchBarDelegate,SearchTextDelegate {
 
     
     
-    func searchBar(_ searchBar: SearchBar, didSelectRowAt row: Int) {
+    func searchBar(_ searchBar: AutoCompleteSearchBar, didSelectRowAt row: Int) {
         
         
         print(items[row])
@@ -53,7 +53,7 @@ class ViewController: UIViewController,SearchBarDelegate,SearchTextDelegate {
     
     
     
-    func searchText(_ searchText: SearchText, didSelectRowAt row: Int) {
+    func searchText(_ searchText: AutoCompleteTextField, didSelectRowAt row: Int) {
         print(items[row])
         
         

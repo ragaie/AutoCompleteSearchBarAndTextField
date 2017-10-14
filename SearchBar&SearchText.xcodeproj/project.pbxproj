@@ -12,12 +12,12 @@
 		811173A91F45E00E00AB0581 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 811173A71F45E00E00AB0581 /* Main.storyboard */; };
 		811173AB1F45E00E00AB0581 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 811173AA1F45E00E00AB0581 /* Assets.xcassets */; };
 		811173AE1F45E00E00AB0581 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 811173AC1F45E00E00AB0581 /* LaunchScreen.storyboard */; };
-		811173BB1F45E03D00AB0581 /* SearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 811173B71F45E03D00AB0581 /* SearchBar.xib */; };
-		811173BC1F45E03D00AB0581 /* SearchText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 811173B81F45E03D00AB0581 /* SearchText.xib */; };
-		811173BD1F45E03D00AB0581 /* SearchText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811173B91F45E03D00AB0581 /* SearchText.swift */; };
-		811173BE1F45E03D00AB0581 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811173BA1F45E03D00AB0581 /* SearchBar.swift */; };
-		8135CD901F683E1300042B68 /* Simulator Screen Shot Sep 12, 2017, 6.07.54 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8135CD8E1F683E1300042B68 /* Simulator Screen Shot Sep 12, 2017, 6.07.54 PM.png */; };
-		8135CD911F683E1300042B68 /* Simulator Screen Shot Sep 12, 2017, 6.07.48 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8135CD8F1F683E1300042B68 /* Simulator Screen Shot Sep 12, 2017, 6.07.48 PM.png */; };
+		811173BD1F45E03D00AB0581 /* AutoCompleteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811173B91F45E03D00AB0581 /* AutoCompleteTextField.swift */; };
+		811173BE1F45E03D00AB0581 /* AutoCompleteSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811173BA1F45E03D00AB0581 /* AutoCompleteSearchBar.swift */; };
+		DF7851F11F922B14007785F2 /* SecandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7851F01F922B14007785F2 /* SecandViewController.swift */; };
+		DF7851F31F9241B9007785F2 /* Screen Shot 2017-10-14 at 2.57.16 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = DF7851F21F9241B9007785F2 /* Screen Shot 2017-10-14 at 2.57.16 PM.png */; };
+		DF7851F61F9241C6007785F2 /* Screen Shot 2017-10-14 at 2.57.46 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = DF7851F41F9241C6007785F2 /* Screen Shot 2017-10-14 at 2.57.46 PM.png */; };
+		DF7851F71F9241C6007785F2 /* Simulator Screen Shot Oct 14, 2017, 2.59.20 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = DF7851F51F9241C6007785F2 /* Simulator Screen Shot Oct 14, 2017, 2.59.20 PM.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,12 +28,12 @@
 		811173AA1F45E00E00AB0581 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		811173AD1F45E00E00AB0581 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		811173AF1F45E00E00AB0581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		811173B71F45E03D00AB0581 /* SearchBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBar.xib; sourceTree = "<group>"; };
-		811173B81F45E03D00AB0581 /* SearchText.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchText.xib; sourceTree = "<group>"; };
-		811173B91F45E03D00AB0581 /* SearchText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchText.swift; sourceTree = "<group>"; };
-		811173BA1F45E03D00AB0581 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
-		8135CD8E1F683E1300042B68 /* Simulator Screen Shot Sep 12, 2017, 6.07.54 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot Sep 12, 2017, 6.07.54 PM.png"; sourceTree = "<group>"; };
-		8135CD8F1F683E1300042B68 /* Simulator Screen Shot Sep 12, 2017, 6.07.48 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot Sep 12, 2017, 6.07.48 PM.png"; sourceTree = "<group>"; };
+		811173B91F45E03D00AB0581 /* AutoCompleteTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteTextField.swift; sourceTree = "<group>"; };
+		811173BA1F45E03D00AB0581 /* AutoCompleteSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteSearchBar.swift; sourceTree = "<group>"; };
+		DF7851F01F922B14007785F2 /* SecandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecandViewController.swift; sourceTree = "<group>"; };
+		DF7851F21F9241B9007785F2 /* Screen Shot 2017-10-14 at 2.57.16 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2017-10-14 at 2.57.16 PM.png"; path = "SearchBar&SearchText/Screen Shot 2017-10-14 at 2.57.16 PM.png"; sourceTree = "<group>"; };
+		DF7851F41F9241C6007785F2 /* Screen Shot 2017-10-14 at 2.57.46 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2017-10-14 at 2.57.46 PM.png"; sourceTree = "<group>"; };
+		DF7851F51F9241C6007785F2 /* Simulator Screen Shot Oct 14, 2017, 2.59.20 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot Oct 14, 2017, 2.59.20 PM.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +50,9 @@
 		811173971F45E00E00AB0581 = {
 			isa = PBXGroup;
 			children = (
+				DF7851F41F9241C6007785F2 /* Screen Shot 2017-10-14 at 2.57.46 PM.png */,
+				DF7851F51F9241C6007785F2 /* Simulator Screen Shot Oct 14, 2017, 2.59.20 PM.png */,
+				DF7851F21F9241B9007785F2 /* Screen Shot 2017-10-14 at 2.57.16 PM.png */,
 				811173A21F45E00E00AB0581 /* SearchBar&SearchText */,
 				811173A11F45E00E00AB0581 /* Products */,
 			);
@@ -66,8 +69,6 @@
 		811173A21F45E00E00AB0581 /* SearchBar&SearchText */ = {
 			isa = PBXGroup;
 			children = (
-				8135CD8E1F683E1300042B68 /* Simulator Screen Shot Sep 12, 2017, 6.07.54 PM.png */,
-				8135CD8F1F683E1300042B68 /* Simulator Screen Shot Sep 12, 2017, 6.07.48 PM.png */,
 				811173B61F45E02100AB0581 /* searchText */,
 				811173B51F45E01800AB0581 /* searchBar */,
 				811173A31F45E00E00AB0581 /* AppDelegate.swift */,
@@ -76,6 +77,7 @@
 				811173AA1F45E00E00AB0581 /* Assets.xcassets */,
 				811173AC1F45E00E00AB0581 /* LaunchScreen.storyboard */,
 				811173AF1F45E00E00AB0581 /* Info.plist */,
+				DF7851F01F922B14007785F2 /* SecandViewController.swift */,
 			);
 			path = "SearchBar&SearchText";
 			sourceTree = "<group>";
@@ -83,8 +85,7 @@
 		811173B51F45E01800AB0581 /* searchBar */ = {
 			isa = PBXGroup;
 			children = (
-				811173B71F45E03D00AB0581 /* SearchBar.xib */,
-				811173BA1F45E03D00AB0581 /* SearchBar.swift */,
+				811173BA1F45E03D00AB0581 /* AutoCompleteSearchBar.swift */,
 			);
 			name = searchBar;
 			sourceTree = "<group>";
@@ -92,8 +93,7 @@
 		811173B61F45E02100AB0581 /* searchText */ = {
 			isa = PBXGroup;
 			children = (
-				811173B81F45E03D00AB0581 /* SearchText.xib */,
-				811173B91F45E03D00AB0581 /* SearchText.swift */,
+				811173B91F45E03D00AB0581 /* AutoCompleteTextField.swift */,
 			);
 			name = searchText;
 			sourceTree = "<group>";
@@ -130,7 +130,6 @@
 				TargetAttributes = {
 					8111739F1F45E00E00AB0581 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 8Z3K9T9U74;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -159,12 +158,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				811173AE1F45E00E00AB0581 /* LaunchScreen.storyboard in Resources */,
-				8135CD901F683E1300042B68 /* Simulator Screen Shot Sep 12, 2017, 6.07.54 PM.png in Resources */,
-				811173BB1F45E03D00AB0581 /* SearchBar.xib in Resources */,
+				DF7851F61F9241C6007785F2 /* Screen Shot 2017-10-14 at 2.57.46 PM.png in Resources */,
 				811173AB1F45E00E00AB0581 /* Assets.xcassets in Resources */,
-				811173BC1F45E03D00AB0581 /* SearchText.xib in Resources */,
+				DF7851F71F9241C6007785F2 /* Simulator Screen Shot Oct 14, 2017, 2.59.20 PM.png in Resources */,
+				DF7851F31F9241B9007785F2 /* Screen Shot 2017-10-14 at 2.57.16 PM.png in Resources */,
 				811173A91F45E00E00AB0581 /* Main.storyboard in Resources */,
-				8135CD911F683E1300042B68 /* Simulator Screen Shot Sep 12, 2017, 6.07.48 PM.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,9 +174,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				811173A61F45E00E00AB0581 /* ViewController.swift in Sources */,
-				811173BE1F45E03D00AB0581 /* SearchBar.swift in Sources */,
+				811173BE1F45E03D00AB0581 /* AutoCompleteSearchBar.swift in Sources */,
 				811173A41F45E00E00AB0581 /* AppDelegate.swift in Sources */,
-				811173BD1F45E03D00AB0581 /* SearchText.swift in Sources */,
+				DF7851F11F922B14007785F2 /* SecandViewController.swift in Sources */,
+				811173BD1F45E03D00AB0581 /* AutoCompleteTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8Z3K9T9U74;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "SearchBar&SearchText/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Chtar.SearchBar-SearchText";
@@ -314,7 +313,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8Z3K9T9U74;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "SearchBar&SearchText/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Chtar.SearchBar-SearchText";

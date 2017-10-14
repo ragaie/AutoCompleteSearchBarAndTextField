@@ -7,41 +7,34 @@
 //
 
 import UIKit
+
+
+
+//Swift 3
+extension UIResponder {
+    func getParentViewController() -> UIViewController? {
+        if self.next is UIViewController {
+            return self.next as? UIViewController
+        } else {
+            if self.next != nil {
+                return (self.next!).getParentViewController()
+            }
+            else {return nil}
+        }
+    }
+}
 protocol SearchTextDelegate {
     
     
-    func searchText(_ searchText: SearchText, didSelectRowAt row: Int)
+    func searchText(_ searchText: AutoCompleteTextField, didSelectRowAt row: Int)
     
     
 }
 
-@IBDesignable class SearchText: UIView ,UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource{
+@IBDesignable class AutoCompleteTextField: UITextField ,UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource{
 
   
-    @IBOutlet weak var searchText: UITextField!
 
-    @IBInspectable var cornerRadius: CGFloat = 0 {
-        didSet {
-            searchText.layer.cornerRadius = cornerRadius
-            clipsToBounds = true
-            
-        }
-    }
-    
-    
-    @IBInspectable var borderWidth: CGFloat = 1.0 {
-        didSet {
-            searchText.layer.borderWidth = borderWidth
-        }
-    }
-    
-    @IBInspectable var borderColor: UIColor = UIColor.blue {
-        didSet {
-            
-            searchText.layer.borderColor = borderColor.cgColor
-        }
-    }
-    
  
  
 
@@ -53,57 +46,33 @@ protocol SearchTextDelegate {
     private  var showDrop : Bool! = false
     var dataSourceItem : [String]! = []
     
-    var delegate : SearchTextDelegate!
+    var delegateAutoCompletText : SearchTextDelegate!
     
     
     var filterDataSource : [String]! = []
     //MARK: Initializers
     override init(frame : CGRect) {
         super.init(frame : frame)
-        initSubviews()
     }
     
     
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        initSubviews()
         initActionAndDelegete()
         
+
+    
     }
-    //////
-    
-    
-    func initSubviews() {
-        
-        let bundle = Bundle(for: type(of: self))
-        
-        
-        let nib = UINib(nibName: "SearchText", bundle: bundle)
-        
-        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
-        
-        // to make view fit view in design you welcome.
-        view.frame = self.bounds
-        // Make the view stretch with containing view
-        // to fit like you want in storyboard
-        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
-        // nib.contentView.frame = bounds
-        addSubview(view)
-        
-        // custom initialization logic
-        
-    }
-    
-    
     
     
     // add action of dropDown
     func initActionAndDelegete()  {
         
         
-        searchText.delegate = self
-        searchText.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        self.delegate = self
+        self.restorationIdentifier = "ragaieText"
+        self.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
         
     }
     
@@ -126,18 +95,37 @@ protocol SearchTextDelegate {
     func showSelection()  {
         
         
-        if searchText.text?.characters.count == 0 {
+        if self.text?.characters.count == 0 {
             
             tableData.removeFromSuperview()
             showDrop = false
-            
+            self.owningViewController()?.view.endEditing(true)
+
         }
             
         else{
             if tableData == nil {
                 //UIScreen.main.bounds.height
+               // yourViewName.superview?.convert(yourViewName.frame, to: nil)
+               
+             //   var frame1 : CGPoint! =  self.getParentViewController()!.view.convert(self.frame.origin, to: UIApplication.shared.keyWindow)
+                print("---- text field")
+                print(self.frame.origin)
                 
-                tableData  = UITableView.init(frame: CGRect.init(x: frame.minX + 5 , y: frame.minY + frame.height, width: frame.width - 10, height:UIScreen.main.bounds.height / 3  ))
+                
+                  var point1 : CGPoint!  = self.getParentViewController()?.view.convert(self.frame.origin, to: nil)
+                
+                var point2 : CGPoint!  = self.getParentViewController()?.view.convert(self.superview!.frame.origin, to: nil)
+                
+             
+                
+                var point3 :CGPoint! = CGPoint.init(x: point1.x + point2.x , y: point2.y + point1.y )
+           
+                
+                tableData  = UITableView.init(frame: CGRect.init(x: (point3.x) + 10 , y: (point3.y)  + (frame.height ), width: frame.width - 20, height:UIScreen.main.bounds.height / 3 ))
+                
+                
+           
                 tableData.dataSource = self
                 tableData.delegate = self
                 
@@ -145,7 +133,8 @@ protocol SearchTextDelegate {
                 tableData.layer.borderColor = UIColor.lightGray.cgColor
                 
             }
-            // get owner that containe this view
+        
+            
             
             self.owningViewController()?.view.addSubview(tableData)
             
@@ -154,10 +143,12 @@ protocol SearchTextDelegate {
         
     }
     
+
+    
     func  filterArray()  {
         
         
-        let filtered = dataSourceItem.filter {  $0.lowercased().contains(searchText.text!.lowercased()) }
+        let filtered = dataSourceItem.filter {  $0.lowercased().contains(self.text!.lowercased()) }
         
         filterDataSource = filtered
         
@@ -175,10 +166,11 @@ protocol SearchTextDelegate {
         
         
         if delegate != nil {
-            self.delegate.searchText(self, didSelectRowAt: indexPath.row)
+            self.delegateAutoCompletText.searchText(self, didSelectRowAt: indexPath.row)
         }
-        
-        searchText.text = filterDataSource[indexPath.row]
+        self.owningViewController()?.view.endEditing(true)
+
+        self.text = filterDataSource[indexPath.row]
         tableData.removeFromSuperview()
         showDrop = false
         
@@ -200,7 +192,7 @@ protocol SearchTextDelegate {
         
         
         let longString = filterDataSource[indexPath.row]
-        let longestWord = searchText.text!
+        let longestWord = self.text!
         
         let longestWordRange = (longString as NSString).range(of: longestWord)
         
